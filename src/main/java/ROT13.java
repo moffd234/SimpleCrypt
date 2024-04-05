@@ -36,7 +36,7 @@ public class ROT13  {
         return output;
     }
 
-    private static Character getEncryptedChar(Character letter, int shiftAmount) {
+    static Character getEncryptedChar(Character letter, int shiftAmount) {
         String lowercaseAlpha = "abcdefghijklmnopqrstuvwxyz";
         String uppercaseAlpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -66,6 +66,7 @@ public class ROT13  {
         }
         return output;
     }
+
 
 
 }
