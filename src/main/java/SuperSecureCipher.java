@@ -25,4 +25,25 @@ public class SuperSecureCipher {
         return output;
     }
 
+    public String decrypt(String input){
+        String output = "";
+
+        for(char c : input.toCharArray()){
+            if(Character.isLowerCase(c) && Character.isLetter(c)){
+                int index = cipherAlphabet.indexOf(c);
+                output += alphabet.charAt(index);
+            }
+            else if(Character.isUpperCase(c) && Character.isLetter(c)){
+
+                int index = capCipherAlpha.indexOf(c);
+                output += capAlphabet.charAt(index);
+            }
+            else{
+                output += c;
+            }
+        }
+
+        return output;
+    }
+
 }

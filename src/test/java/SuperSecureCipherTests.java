@@ -36,4 +36,31 @@ public class SuperSecureCipherTests {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void superSecureDecryptTest() {
+        String expected = "heLlo";
+        String input = "itSsg";
+
+        String actual = ssc.decrypt(input);
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void superSecureDecryptTest1() {
+        String expected = "world";
+        String input = "vgksr";
+
+        String actual = ssc.decrypt(input);
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void superSecureDecryptTest2() {
+        String expected = "Hello World";
+        String input = "Itssg Vgksr";
+
+        String actual = ssc.decrypt(input);
+        Assert.assertEquals(expected, actual);
+    }
+
 }
